@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
+
 html, body {
     width: 100%;
     margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 12pt;
 }
 
 .carousel {
@@ -14,4 +18,53 @@ html, body {
 
 .carousel-img {
     width: 100%;
+}
+
+ul#questions-list {
+    list-style-type: decimal;  /* Very funny:D - use <ul> and make it simmilar to <ol> */
+}
+/* Flexbox example */
+.question {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.question-title {
+    width: 70%;
+    padding: 15px;
+}
+
+/* Some css breakpoints example */
+@media (max-width: 768px) { 
+    .question {
+        flex-direction: column;
+    }
+
+    .question-title {
+        width: calc(100% - 30px);
+    }
+}
+
+.question button {
+    color: white;
+    background-color: teal;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-size: 12pt;
+    display: inline;
+    margin: 5px 20px;
+
+}
+
+.question button:hover {
+    cursor: pointer;
+    transition-duration: .3s;
+    background-color: rgb(2, 77, 77);
+    outline: none;
+}
+
+.answer {
+    display: none;
 }
